@@ -10,15 +10,24 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long id;
-    private String login, password,email;
+    private String login, password,email,fio;
+
+    public String getFio() {
+        return fio;
+    }
+
+    public void setFio(String fio) {
+        this.fio = fio;
+    }
 
     public User() {
     }
 
-    public User(String login, String password, String email) {
+    public User(String login, String password, String email,String fio) {
         this.login = login;
         this.password = password;
         this.email = email;
+        this.fio = fio;
     }
 
     public Long getId() {

@@ -12,12 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class UslugiController {
 
-@Autowired
-private UserRepository userRepository;
+
+
     @GetMapping("/uslugi")
-    public String uslugi(Model model){
-        Iterable<User> users =userRepository.findAll();
-        model.addAttribute("user",users);
+
+        public String uslugi(Model model){ model.addAttribute("title","услуги");
 
         return "uslugi";
     }
